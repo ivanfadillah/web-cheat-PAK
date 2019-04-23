@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pure CSS Radio Button Tiles</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="pos-center">
+        <i class="fas fa-couch fa-4x" style="color:Tomato"></i>
+    </div>
+    <div class="mar-door">
+      <i class="fas fa-door-open fa-4x " style="color:Tomato"></i>
+    </div>
+  <form action = "result" method="post">
+  <div class="container">
+  <div class="radio-tile-group">
+    <table>
+      {% for i in range(1,5) %}
+      <tr>
+        {% for j in range(1,9) %}
+        <td>
+          <div class="input-container">
+            <input id="walk" class="radio-button" type="radio" name="radio" />
+              <div class="radio-tile">
+                <div class="icon walk-icon ">
+                    <i class="fa fa-chair fa-3x fa-rotate-180" style="color:Tomato"></i>
+                </div>
+                <label for="walk" class="radio-tile-label"> {{(i-1)*8+j}} </label>
+              </div>
+          </div>
+        </td> 
+        {% endfor %} 
+    </tr>
+      {% endfor %}
+      </table>
+  </div>
+  </div>
+  <div class="button-state">
+      <input value="Send" type="submit" />
+  </div>
+</form>
+  
+</body>
+
+</html>

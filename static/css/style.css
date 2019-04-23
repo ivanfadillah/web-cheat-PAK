@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: rgb(245, 255, 190);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 5vh; */
+}
+
+.pos-center {
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+  background-color: #8CFF19;
+  border: 2px solid #EB9B12;
+  text-align: center;
+  width: 15%;
+  height: 5%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-top: 5%; */
+  border-radius: 25px;
+  /* border: 50px; */
+}
+
+.chair-std {
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+  background-color: #8CFF19;
+  border: 2px solid #EB9B12;
+  text-align: center;
+  width: 150%;
+  height: 5%;
+  margin: 20%;  
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-top: 5%; */
+  border-radius: 25px;
+  /* border: 50px; */
+}
+
+.mar-door{
+  margin-left:15%;
+  margin-bottom: 1cm;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.radio-tile-group .input-container {
+  position: relative;
+  height: 7rem;
+  width: 7rem;
+  margin: 0.5rem;
+}
+.radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.radio-tile-group .input-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88%;
+  height: 88%;
+  border: 2px solid #EB9B12;
+  border-radius: 25px;
+  padding: 1rem;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  /* background-color: #8CFF19 */
+}
+.radio-tile-group .input-container .icon svg {
+  fill: #8CFF19;
+  width: 3rem;
+  height: 3rem;
+}
+.radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8CFF19;
+}
+.radio-tile-group .input-container .radio-button:checked + .radio-tile {
+  background-color: #8CFF19;
+  border: 2px solid #EB9B12;
+  color: #A8FFEB;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+.radio-tile-group .input-container .radio-button:checked + .radio-tile .icon svg {
+  fill: #A8FFEB;
+  background-color: #8CFF19;
+}
+.radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+  color: #A8FFEB;
+  background-color: #8CFF19;
+}
+
+input[type=submit]{
+  margin-left: 0.5em;
+  height: 2.5em;
+  padding: 0.2em 1em 0.2em 2.25em;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: #696666;
+  background: url(https://i.imgur.com/Th606mh.png) no-repeat scroll 0.75em 0.07em transparent;
+  background-size: 54px 204px;
+  border-radius: 2em;
+  border: 0.15em solid #F9C23C;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+input[type="submit"]:hover {
+    color: #fff;
+    background-color: #EAA502;
+    border-color: #EAA502;
+    background-position: 0.75em bottom;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+input[type="submit"]:focus {
+    background-position: 2em -4em;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/* Webfonts */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+.button-state {
+  margin-left: 39%;
+}
